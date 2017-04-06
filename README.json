@@ -1,4 +1,5 @@
 {
-    "netid": "zht1",
-    "backend": "https://peaceful-headland-75048.herokuapp.com"
+  "netid": "zht1",
+  "frontend": "http://aback-chance.surge.sh/",
+  "backend": "https://peaceful-headland-75048.herokuapp.com/"
 }
