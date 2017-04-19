@@ -99,6 +99,23 @@ const password = (req, res) => {
     })
 }
 
+//Called by frontend upon refreshing page to keep a logged in user at the main page.
+const refresh = (req, res) => {
+    const sid = req.cookies[cookieKey]
+
+    if (!sid) {
+         return
+    }
+    
+    const username = sessions[sid]
+
+    if (!username) {
+        return
+    }
+
+    res.send({isLoggedin:true, username: username})
+}
+
 const isLoggedin = (req, res, next) => {
     const sid = req.cookies[cookieKey]
 
@@ -138,6 +155,7 @@ module.exports = (app) => {
     app.put('/logout', isLoggedin, logout)
     app.post('/register', register)
     app.put('/password', isLoggedin, password)
+    app.get('/refresh', refresh)
     app.get('', hello)
     app.put('/', index)
     app.use(isLoggedin)
