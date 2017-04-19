@@ -1,0 +1,8 @@
+
+> hw6backend@0.0.0 test C:\Users\Zachary Tu\IdeaProjects\hw6
+> mocha --opts mocha.opts src/**/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="2" failures="0" errors="0" skipped="0" timestamp="Wed, 05 Apr 2017 20:07:44 GMT" time="0.046">
+<testcase classname="Validate Article functionality" name="should update add an Article!" time="0.016"/>
+<testcase classname="Validate PUT/headline" name="should update Headline Message!" time="0.015"/>
+</testsuite>
