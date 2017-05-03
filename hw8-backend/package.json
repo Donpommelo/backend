@@ -1,0 +1,37 @@
+{
+  "name": "hwfinal",
+  "private": true,
+  "version": "0.0.0",
+  "description": "back end for hw final",
+  "license": "MIT",
+  "repository": "https://github.com/Donpommelo/comp431",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cloudinary": "^1.8.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "md5": "^2.2.1",
+    "mongoose": "^4.9.6",
+    "morgan": "^1.7.0",
+    "multer": "^1.3.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "redis": "^2.7.1",
+    "stream": "0.0.2"
+  },
+  "scripts": {
+    "start": "set CLOUDINARY_URL=cloudinary://693333792444788:_TXMl8F-5Hy0zHhekQPoKHcLGoA@hfp6fhdim&& set REDIS_URL=redis://h:p167c0f047864d718e158fcd5cf69189065124308604227799e3d65e9f6b8346f@ec2-34-206-56-122.compute-1.amazonaws.com:42479&& node index.js",
+    "watch": "nodemon index.js",
+    "test": "mocha --opts mocha.opts src/**/*.spec.js",
+    "test:watch": "npm run test -- -w"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "dot-env": "0.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0"
+  }
+}
